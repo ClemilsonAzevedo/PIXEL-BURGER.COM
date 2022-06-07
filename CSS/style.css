@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+:root
+{
+    --fontlogo:'Press Start 2P', cursive;
+    --fontbody:'Playfair Display', serif;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body
+{
+    background: linear-gradient(to right, #ff4e50, #f9d423);
+    color: #000;
+    font-family: var(--fontbody);
+}
+
+header
+{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    height: 7vh;
+    background: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #ffa601;
+}
+
+header > .logo
+{
+    cursor: pointer;
+    font: 500 2.5vw var(--fontlogo);
+    letter-spacing: 2px;
+}
+
+header > nav > ul
+{
+    list-style: none;
+    display: flex;
+    font: normal 1.9vw var(--fontbody);
+}
+
+header > nav > ul li
+{
+    margin-left: 7px;
+}
+
+header > nav > ul li a
+{
+    padding: 5px;
+    color: #ffa601;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-weight: bolder;
+    transition-duration: .3s;
+}
+
+header > nav > ul li a:hover
+{
+    border-radius: 5px;
+    padding: 7px;
+    transform-origin: 100%;
+    background-color: #ffa601;
+    color: black;
+}
+
+section.img-back
+{
+    height: 83vh;
+    background: black url(../imagens/background.jpg) center center no-repeat fixed;
+    background-size: cover;
+    box-shadow: inset 4px 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+section.img-back > div.principal
+{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section.img-back > div.principal > div.text
+{
+    width: 85%;
+    height: 85%;
+    border: 3px solid #ffffff50;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.5);
+    background: black url(../imagens/background-pq.jpg) center center no-repeat scroll;
+    background-size: cover;
+    border-radius: 10px;
+    transition-duration: .4s;
+}
+
+section.img-back > div.principal > div.text > h1
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: bold 4.5vw var(--fontlogo);
+    background-color: rgba(255, 255, 255, .5);
+    color: #ffa601;
+    transition-duration: .5s;
+}
+
+section.img-back > div.principal > div.text > h1:hover
+{
+    opacity: 0;
+}
+/*.............................................*/
+
+section.cards
+{
+    height: 65vh;
+    text-align: center;
+}
+
+section > h2
+{
+    margin: auto;
+    padding: 20px;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+    font-size: 3vw;
+    max-width: 580px;
+    text-align: center;
+}
+
+section.cards > div.card
+{
+    display: inline-block;
+    margin: 5px;
+    border: 1px solid white;
+    width: 25vw;
+    height: 25vh;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition-duration: .6s;
+}
+
+section.cards > div.card:hover
+{
+    width: 28vw;
+    height: 27vh;
+}
+
+section.cards > div#card1
+{
+    background: black url(../imagens/img-car001.jpg) center center no-repeat scroll;
+    background-size: cover;
+}
+
+section.cards > div#card2
+{
+    background: black url(../imagens/img-car002.jpg) center center no-repeat scroll;
+    background-size: cover;
+}
+
+section.cards > div#card3
+{
+    background: black url(../imagens/img-car003.jpg) center center no-repeat scroll;
+    background-size: cover;
+}
+
+section.cards > div#card4
+{
+    background: black url(../imagens/img-car004.jpg) center center no-repeat scroll;
+    background-size: cover;
+}
+
+section.cards > div#card5
+{
+    background: black url(../imagens/img-car005.jpg) center center no-repeat scroll;
+    background-size: cover;
+}
+
+section.cards > div#card6
+{
+    background: black url(../imagens/img-car006.jpg) center center no-repeat scroll;
+    background-size: cover;
+}
+
+
+section.cards > div.card > p
+{
+    color: white;
+    margin: auto;
+    height: 100%;
+    padding: 5px;
+    line-height: 1;
+    text-align: justify;
+    font-size: 1.3vh;
+    opacity: 0;
+    transition-duration: .5s;
+}
+
+section.cards > div.card > p:hover
+{
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+/*----------------------------------------------------*/
+
+section.othercards
+{
+    display: block;
+    margin: 20px;
+}
+
+section.othercards > div
+{
+    display: inline-flex;
+    width: 100%;
+    height: 30vh;
+}
+
+section.othercards > div p
+{
+    text-align: justify;
+    font-size: 2vw;
+    margin-top: 15px;
+    padding: 5px;
+    line-height: 1.7;
+}
+
+section.othercards > div img
+{
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    margin: 20px 10px 10px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer style*/
+/*Social Midia Style*/
+footer
+{
+    background: black;
+    color: #ffa601;
+}
+
+footer .social
+{
+    text-align: center;
+    padding: 10px 0px;
+}
+
+footer .social a
+{
+    font-size: 2vw;
+    color: #ffa601;
+    border: 1px solid #ffa601;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.7;
+}
+
+footer .social a:hover
+{
+    opacity: 1;
+}
+/*Social Midia Style*/
+
+/*Link List style*/
+footer ul
+{
+    list-style: none;
+    font: bold 2.3vh;
+    line-height: 1.6;
+    text-align: center;
+}
+
+footer ul li
+{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+footer ul a
+{
+    font-variant: small-caps;
+    color: #ffa601;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+footer ul a:hover
+{
+    opacity: 1;
+    text-decoration: underline;
+}
+/*Link List style*/
+
+/*Paragraph style*/
+footer .copyright
+{
+    font-size: 2.5vh;
+    text-align: center;
+    padding: 15px;
+}
+/*Paragraph style*/
+/*Footer style*/
+
