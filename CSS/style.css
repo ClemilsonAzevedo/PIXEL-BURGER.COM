@@ -1,28 +1,42 @@
+/*Special charsets*/
 @charset "UTF-8";
+/*Special charsets*/
 
+/*Important imports*/
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+/*Important imports*/
 
+/*Variables*/
 :root
 {
     --fontlogo:'Press Start 2P', cursive;
     --fontbody:'Playfair Display', serif;
-}
 
+    --specialfontcolor:#ffa601;
+    --specialblack:#000;
+}
+/*Variables*/
+
+/*all selectors style*/
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box
 }
+/*all selectors style*/
 
+/*body style*/
 body
 {
     background: linear-gradient(to right, #ff4e50, #f9d423);
-    color: #000;
+    color: var(--specialblack);
     font-family: var(--fontbody);
 }
+/*body style*/
 
+/*Header Style*/
 header
 {
     width: 100%;
@@ -30,20 +44,23 @@ header
     top: 0;
     z-index: 999;
     height: 7vh;
-    background: black;
+    background: var(--specialblack);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: #ffa601;
+    color: var(--specialfontcolor);
 }
 
+/*logo style*/
 header > .logo
 {
     cursor: pointer;
     font: 500 2.5vw var(--fontlogo);
     letter-spacing: 2px;
 }
+/*logo style*/
 
+/*Navigation Bar style*/
 header > nav > ul
 {
     list-style: none;
@@ -59,7 +76,7 @@ header > nav > ul li
 header > nav > ul li a
 {
     padding: 5px;
-    color: #ffa601;
+    color: var(--specialfontcolor);
     text-decoration: none;
     font-variant: small-caps;
     font-weight: bolder;
@@ -71,23 +88,28 @@ header > nav > ul li a:hover
     border-radius: 5px;
     padding: 7px;
     transform-origin: 100%;
-    background-color: #ffa601;
-    color: black;
+    background-color: var(--specialfontcolor);
+    color: var(--specialblack);
 }
+/*Navigation Bar style*/
+/*Header Style*/
 
+/*top image background style*/
 section.img-back
 {
     height: 83vh;
-    background: black url(../imagens/background.jpg) center center no-repeat fixed;
+    background: var(--specialblack) url(../imagens/background.jpg) center center no-repeat fixed;
     background-size: cover;
     box-shadow: inset 4px 4px 2px rgba(0, 0, 0, 0.5);
 }
+/*top image background style*/
 
+/*top text style*/
 section.img-back > div.principal
 {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--specialblack)(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +121,7 @@ section.img-back > div.principal > div.text
     height: 85%;
     border: 3px solid #ffffff50;
     box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.5);
-    background: black url(../imagens/background-pq.jpg) center center no-repeat scroll;
+    background: var(--specialblack) url(../imagens/background-pq.jpg) center center no-repeat scroll;
     background-size: cover;
     border-radius: 10px;
     transition-duration: .4s;
@@ -114,7 +136,7 @@ section.img-back > div.principal > div.text > h1
     justify-content: center;
     font: bold 4.5vw var(--fontlogo);
     background-color: rgba(255, 255, 255, .5);
-    color: #ffa601;
+    color: var(--specialfontcolor);
     transition-duration: .5s;
 }
 
@@ -122,8 +144,10 @@ section.img-back > div.principal > div.text > h1:hover
 {
     opacity: 0;
 }
+/*top image background style*/
 /*.............................................*/
 
+/*Card style*/
 section.cards
 {
     height: 65vh;
@@ -161,37 +185,37 @@ section.cards > div.card:hover
 
 section.cards > div#card1
 {
-    background: black url(../imagens/img-car001.jpg) center center no-repeat scroll;
+    background: var(--specialblack) url(../imagens/img-car001.jpg) center center no-repeat scroll;
     background-size: cover;
 }
 
 section.cards > div#card2
 {
-    background: black url(../imagens/img-car002.jpg) center center no-repeat scroll;
+    background: var(--specialblack) url(../imagens/img-car002.jpg) center center no-repeat scroll;
     background-size: cover;
 }
 
 section.cards > div#card3
 {
-    background: black url(../imagens/img-car003.jpg) center center no-repeat scroll;
+    background: var(--specialblack) url(../imagens/img-car003.jpg) center center no-repeat scroll;
     background-size: cover;
 }
 
 section.cards > div#card4
 {
-    background: black url(../imagens/img-car004.jpg) center center no-repeat scroll;
+    background: var(--specialblack) url(../imagens/img-car004.jpg) center center no-repeat scroll;
     background-size: cover;
 }
 
 section.cards > div#card5
 {
-    background: black url(../imagens/img-car005.jpg) center center no-repeat scroll;
+    background: var(--specialblack) url(../imagens/img-car005.jpg) center center no-repeat scroll;
     background-size: cover;
 }
 
 section.cards > div#card6
 {
-    background: black url(../imagens/img-car006.jpg) center center no-repeat scroll;
+    background: var(--specialblack) url(../imagens/img-car006.jpg) center center no-repeat scroll;
     background-size: cover;
 }
 
@@ -214,8 +238,11 @@ section.cards > div.card > p:hover
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 1;
 }
+/*Card style*/
+
 /*----------------------------------------------------*/
 
+/*card style 1 - 1*/
 section.othercards
 {
     display: block;
@@ -242,36 +269,17 @@ section.othercards > div img
 {
     width: 60%;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px black;
+    box-shadow: 2px 2px 5px var(--specialblack);
     margin: 20px 10px 10px 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*card style 1 - 1*/
 
 /*Footer style*/
 /*Social Midia Style*/
 footer
 {
-    background: black;
-    color: #ffa601;
+    background: var(--specialblack);
+    color: var(--specialfontcolor);
 }
 
 footer .social
@@ -283,8 +291,8 @@ footer .social
 footer .social a
 {
     font-size: 2vw;
-    color: #ffa601;
-    border: 1px solid #ffa601;
+    color: var(--specialfontcolor);
+    border: 1px solid var(--specialfontcolor);
     width: 40px;
     height: 40px;
     line-height: 38px;
@@ -318,7 +326,7 @@ footer ul li
 footer ul a
 {
     font-variant: small-caps;
-    color: #ffa601;
+    color: var(--specialfontcolor);
     text-decoration: none;
     opacity: 0.7;
 }
